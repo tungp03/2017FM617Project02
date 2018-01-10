@@ -310,7 +310,7 @@ def ROE_strategy():
     message = """<font face="微軟正黑體">
     <FONT SIZE=5><B>以連續n年ROE大於特定值作為基準，選出排名前段的股票</B></FONT><br/>
     由於IFRS方法的關係，我們只能從<FONT COLOR=#E00000><B>2013年</B></FONT>開始選股<br/>
-    注意:年度請挑2013-2016內任意年<br/>
+    注意:年度請挑2000-2016內任意年<br/>
     <br/>
     範例：選出2014年到2016年ROE大於2.5%的公司<br/>
     輸入：/ROE_strategy/2014,2016,2.5/companyROE<br/>
@@ -332,7 +332,7 @@ def companyROE(symbol):
     <FONT SIZE=5><U><B>Step2.回測</B></U></FONT><br/>
     回測方式：布林通道策略、RSI策略、均線策略、KD值策略、威廉指標策略<br/>
     請選擇回測方式、時間區間與前n名股票<br/>
-    注意:年度請挑2014-2017內任意年<br/>
+    注意:回測時間最早只能從1993年開始<br/>
     <br/>
     1.布林通道策略範例：從2016年9月1號開始到2017年1月10號，選ROE排名前<B>5</B>檔，以<B>10</B>(平均10天)為中間基準，抓上下<B>3</B>個標準差的距離<br/>
       輸入：/ROE_strategy/2014,2016,2.5/companyROE/ROE_BBands/2016-09-01,2017-01-10<B>+5+10+3</B><br/>
@@ -599,7 +599,7 @@ def EPS_strategy():
     message = """<font face="微軟正黑體">
     <FONT SIZE=5><B>以連續n年EPS大於特定值作為基準，選出排名前段的股票</B></FONT><br/>
     由於IFRS方法的關係，我們只能從<FONT COLOR=#E00000><B>2013年</B></FONT>開始選股<br/>
-    注意:年度請挑2013-2016內任意年<br/>
+    注意:年度請挑2000-2016內任意年<br/>
     <br/>
     範例：選出2014年到2016年EPS大於2.5的公司<br/>
     輸入：/EPS_strategy/2014,2016,2.5/companyEPS<br/>
@@ -621,7 +621,7 @@ def companyEPS(symbol):
     <FONT SIZE=5><U><B>Step2.回測</FONT></U></B><br/>
     回測方式：布林通道策略、RSI策略、均線策略、KD值策略、威廉指標策略<br/>
     請選擇回測方式、時間區間與前n名股票<br/>
-    注意:年度請挑2014-2017內任意年<br/>
+    注意:回測時間最早只能從1993年開始<br/>
     <br/>
     1.布林通道策略範例：從2016年9月1號開始到2017年1月10號，選EPS排名前<B>5</B>檔，以<B>10</B>(平均10天)為中間基準，抓上下<B>3</B>個標準差的距離<br/>
       輸入：/EPS_strategy/2014,2016,2.5/companyEPS/EPS_BBands/2016-09-01,2017-01-10<B>+5+10+3</B><br/>
@@ -888,7 +888,7 @@ def Dob_strategy():
     message = """<font face="微軟正黑體">
     <FONT SIZE=5><B>以連續n年ROE與EPS大於特定值作為基準，選出排名前段的股票</B></FONT><br/>
     由於IFRS方法的關係，我們只能從<FONT COLOR=#E00000><B>2013年</B></FONT>開始選股<br/>
-    注意:年度請挑2013-2016內任意年<br/>
+    注意:年度請挑2000-2016內任意年<br/>
     <br/>
     範例1：選出2014年到2016年<FONT COLOR=#B87800>ROE大於2.5%</FONT>且<FONT COLOR=#00B8B8>EPS大於10</FONT>的公司，並以<FONT COLOR=#008F00>ROE</FONT>排序<br/>
     輸入：/Dob_strategy/2014,2016,<FONT COLOR=#B87800>2.5</FONT>,<FONT COLOR=#00B8B8>10</FONT>,<FONT COLOR=#008F00>ROE</FONT>/companyDob<br/>
@@ -918,7 +918,7 @@ def companyDob(symbol):
     <FONT SIZE=5><U><B>Step2.回測</FONT></U></B><br/>
     回測方式：布林通道策略、RSI策略、均線策略、KD值策略、威廉指標策略<br/>
     請選擇回測方式、時間區間與前n名股票<br/>
-    注意:年度請挑2014-2017內任意年<br/>
+    注意:回測時間最早只能從1993年開始<br/>
     <br/>
     1.布林通道策略範例：從2016年9月1號開始到2017年1月10號，以ROE(EPS)排序後選排名前<B>5</B>檔，以<B>MA10</B>(平均10天)為中間基準，抓上下<B>3</B>個標準差的距離<br/>
     輸入：/Dob_strategy/2014,2016,2.5,10,ROE(EPS)/companyDob/Dob_BBands/2016-09-01,2017-01-10<B>+5+10+3</B><br/>
