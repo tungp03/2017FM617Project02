@@ -33,7 +33,7 @@ def index():
     /RSI_strategy ==> <B>RSI</B>策略，以當日RSI值跌破RSI低點買進，突破RSI高點賣出<br/>
     /MA_strategy ==> <B>均線</B>策略，當今日股價突破短期均線，且短期均線突破長均線時買進；當股價跌破短期均線且短均線跌破長均線時賣出<br/>
     /KD_strategy ==> <B>KD值</B>策略，K值由下穿越D值且D值大於某值代表行情看好，買進；K值由上穿越D值且D值小於某值代表行情看壞，賣出<br/>
-    /william_strategy ==> <B>威廉指標</B><br/>
+    /william_strategy ==> <B>威廉指標，當威廉指數的值越大，市場越處買方主導，相反越接近零，市場由賣方主導，一般來說低於20%的水平會視為超買（Overbought）的訊號，而大於80%以下則被視為超賣（Oversold）訊號(這裡將負號改為正號)</B><br/>
     </font>"""
     return message
 
@@ -309,7 +309,6 @@ def MA_strategy(symbol):
 def ROE_strategy():
     message = """<font face="微軟正黑體">
     <FONT SIZE=5><B>以連續n年ROE大於特定值作為基準，選出排名前段的股票</B></FONT><br/>
-    由於IFRS方法的關係，我們只能從<FONT COLOR=#E00000><B>2013年</B></FONT>開始選股<br/>
     注意:年度請挑2000-2016內任意年<br/>
     <br/>
     範例：選出2014年到2016年ROE大於2.5%的公司<br/>
@@ -598,7 +597,6 @@ def ROE_MA(symbol,test):
 def EPS_strategy():
     message = """<font face="微軟正黑體">
     <FONT SIZE=5><B>以連續n年EPS大於特定值作為基準，選出排名前段的股票</B></FONT><br/>
-    由於IFRS方法的關係，我們只能從<FONT COLOR=#E00000><B>2013年</B></FONT>開始選股<br/>
     注意:年度請挑2000-2016內任意年<br/>
     <br/>
     範例：選出2014年到2016年EPS大於2.5的公司<br/>
@@ -887,7 +885,6 @@ def EPS_MA(symbol,test):
 def Dob_strategy():
     message = """<font face="微軟正黑體">
     <FONT SIZE=5><B>以連續n年ROE與EPS大於特定值作為基準，選出排名前段的股票</B></FONT><br/>
-    由於IFRS方法的關係，我們只能從<FONT COLOR=#E00000><B>2013年</B></FONT>開始選股<br/>
     注意:年度請挑2000-2016內任意年<br/>
     <br/>
     範例1：選出2014年到2016年<FONT COLOR=#B87800>ROE大於2.5%</FONT>且<FONT COLOR=#00B8B8>EPS大於10</FONT>的公司，並以<FONT COLOR=#008F00>ROE</FONT>排序<br/>
